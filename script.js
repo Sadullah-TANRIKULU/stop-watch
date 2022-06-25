@@ -56,6 +56,8 @@ playBtn.addEventListener("click", () => {
   } else {
     clearInterval(timer);
     audio.pause();
+    console.log(audio.currentTime);
+
     playBtn.innerHTML = `<i class="fa-solid fa-circle-play"></i>`;
   }
 
@@ -67,6 +69,8 @@ stopBtn.addEventListener("click", () => {
   sec = 0;
   mSec = 0;
   clearInterval(timer);
+  audio.currentTime = 0;
+  console.log(audio.currentTime);
   stopWatch.innerHTML = `0${min}: 0${sec}: 0${mSec}`;
   playBtn.innerHTML = `<i class="fa-solid fa-circle-play"></i>`;
   isRunning = false;
