@@ -69,6 +69,7 @@ stopBtn.addEventListener("click", () => {
   sec = 0;
   mSec = 0;
   clearInterval(timer);
+  audio.pause();
   audio.currentTime = 0;
   console.log(audio.currentTime);
   stopWatch.innerHTML = `0${min}: 0${sec}: 0${mSec}`;
